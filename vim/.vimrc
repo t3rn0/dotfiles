@@ -25,10 +25,13 @@ call plug#end()
 
 map <Leader>F :Files<CR>
 map <F5> :NERDTreeToggle<CR>
+map <Leader>b :Buffers<CR>
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
+inoremap <C-u> <C-g>u<C-u>
+inoremap <C-w> <C-g>u<C-w>
 inoremap <S-Tab> <C-d>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
