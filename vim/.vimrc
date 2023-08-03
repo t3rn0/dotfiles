@@ -1,4 +1,3 @@
-filetype plugin indent on
 syntax on
 
 set number
@@ -9,7 +8,10 @@ set incsearch
 set hlsearch
 set shiftwidth=4
 set tabstop=4
+set softtabstop=4
+set indentexpr=""
 set ruler
+set backspace=indent,eol,start
 
 set nocompatible
 filetype off
@@ -23,6 +25,8 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 
 call plug#end()
+
+filetype plugin on
 
 map <Leader>F :Files<CR>
 map <F5> :NERDTreeToggle<CR>
@@ -38,10 +42,8 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-
-filetype plugin indent on
-
 autocmd FileType json setlocal shiftwidth=2 tabstop=2
+autocmd FileType yaml setlocal indentkeys-=0#
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
